@@ -4,20 +4,21 @@ These tutorials introduce amortized simulation-based inference (SBI) with [Bayes
 
 ## SBI in brief
 
-A simulator maps parameters $\theta$ to observations $x$. This is the **forward problem**. SBI addresses the **inverse problem**: determining which parameters could have produced an observation.
+A simulator maps parameters $\theta$ to observations $y$. This is the **forward problem**. SBI addresses the **inverse problem**: determining which parameters could have produced an observation.
+Neural SBI trains on simulated $(\theta, y)$ pairs. Once trained, an *amortized estimator* can sample from $p(\theta \mid y)$ for many observations without retraining.
 
-![Forward and inverse problems](https://bayesops.com/images/index/forward-inverse.svg)
+<img src="https://bayesops.com/images/index/forward-inverse.svg" alt="Forward and inverse problems" width="80%">
 
-Neural SBI trains on simulated $(\theta, x)$ pairs. Once trained, an amortized model can estimate $p(\theta \mid x)$ for many observations without retraining.
+
 
 ## Tutorials
 
 | Tutorial | Topic |
 | --- | --- |
-| [Diffusion Model for Conflict Tasks](dmc/dmc-bayesflow.ipynb) | Infer cognitive-model parameters from choices and response times. |
-| [Human Neocortical Neurosolver](hnn/HNN_Integration.ipynb) | Infer parameters of a biophysical neural circuit. |
+| [Diffusion Model for Conflict Tasks](dmc/tutorial-notebook.ipynb) | Infer cognitive-model parameters from choices and response times. |
+| [Human Neocortical Neurosolver](hnn/tutorial-notebook.ipynb) | Infer parameters of a biophysical neural circuit. |
 
-Both tutorials load bundled raw training simulations. The HNN posterior-predictive cells require macOS, Linux, or WSL because NEURON is unavailable on native Windows.
+Both tutorials load bundled raw training simulations. The HNN posterior-predictive cells require macOS, Linux, or WSL because NEURON is, unfortunately, unavailable on native Windows.
 
 ## Setup
 
@@ -27,7 +28,7 @@ Install [Visual Studio Code](https://code.visualstudio.com/) and its [Python](ht
 
 ### 2. Install uv and Python
 
-Install uv using the [official instructions](https://docs.astral.sh/uv/getting-started/installation/) or one of these commands.
+Install `uv` using the [official instructions](https://docs.astral.sh/uv/getting-started/installation/) or one of these commands.
 
 Windows PowerShell:
 
