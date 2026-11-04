@@ -9,7 +9,7 @@ from math import log
 import numpy as np
 import pymc as pm
 
-from .helpers import PARAMETER_NAMES, PRIOR_SPECS
+from helpers import PARAMETER_NAMES, PRIOR_SPECS
 
 
 def sample_nle_posterior(

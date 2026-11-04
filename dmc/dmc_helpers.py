@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 import time
 import bayesflow as bf
-from .dmc_simulator import DMC
+
 import copy
 import warnings
 import seaborn as sns

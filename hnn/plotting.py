@@ -3,7 +3,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-from .helpers import PARAMETER_LABELS, PARAMETER_NAMES, TIME_GRID
+from helpers import PARAMETER_LABELS, PARAMETER_NAMES, TIME_GRID
 
 METHOD_COLORS = {"NPE": "#2A9D8F", "NLE": "#E76F51"}
 PRIOR_COLOR = "#8A8A8A"
